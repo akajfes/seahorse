@@ -1,0 +1,229 @@
+body {
+    font-family: "Montserrat", serif;
+    line-height: 1.5;
+}
+
+p,
+h2,
+h3 {
+    /* font-weight: 300; */
+    color: #003249;
+}
+
+.inner-container,
+main {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.inner-container {
+    padding: 0 1rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+}
+
+h1 img{
+    width: 150px;
+}
+
+.menu li {
+    line-height: 40px;
+    text-align: center;
+}
+
+.menu li:last-of-type {
+    padding-bottom: 1rem;
+}
+
+.menu a {
+    color: #3f3f3f;
+    text-decoration: none;
+    display: block;
+    padding: 1.2rem;
+    text-transform: uppercase;
+}
+
+.menu a:hover,
+.menu a:active {
+    background-color: gainsboro;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+svg {
+    fill: #3f3f3f;
+}
+
+svg:hover{
+    fill:#A4B374;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Step 2: Hide the menu. Once it's hidden, this will be the default stage on load. 
+FYI = the display property cannot be transitioned:
+header nav {
+    display: none;
+    transition: display 1s ease-in-out;
+}, so we can hide the nav by making it's max-height (NOT height) 0*/
+header nav {
+    /* styling this so it overlaps the main content
+    this element will be absolute to the viewport 
+    make sure to add in left and top values [left: 0, top: height of the header]*/
+    position: absolute;
+    left: 0;
+    top: 90px;
+    background-color: #fff;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+/* Step 3: Create a special class to show the menu. This class name will only exist in the CSS for now.
+Then then JS will add thiss class to the hidden element for us (in this case, the nav) */
+.show-nav {
+    max-height: 220px;
+}
+
+/* Step 4: add a media query and show the nav by default, hide the button, and style it as a horizontal nav */
+@media screen and (min-width: 700px) {
+    .inner-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+    header nav {
+        max-height: 200px;
+        width: unset; /*a way to reverse anything we did before and to restore things to their default value*/
+        overflow: visible;
+        position: static;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menu a {
+        padding: 0 0.75rem;
+    }
+
+    .menu a:hover,
+    .menu a:active {
+        background-color: #fff;
+        color:#A4B374;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu li:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+/*home page*/
+.home-header {
+    background-image: url("/img/home-header-mobile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.home-header h2{
+    color: #fff;
+}
+
+section h2 {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 800px){
+    .home-header{
+        background-image: url("/img/home-header-tablet.webp");
+        height: 67vw;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .home-header{
+        background-image: url("/img/home-header-tablet.webp");
+        height: 30vw;
+    }
+}
+
+.green-btn {
+    background-color: #A4B374;
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 125px;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+/* footer */
+.get-in-touch {
+    background-image: url(/img/bottomwave.svg);
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    
+}
+
+.get-in-touch svg {
+    width: 32px;
+    fill: #A4B374;
+}
+
+.contact {
+    background-color: #A4B374;
+    padding: 1rem;
+}
+
+.contact div {
+    margin-bottom: 2rem;
+}
+
+footer h2,
+footer h3,
+footer p {
+    color: #fff;
+}
