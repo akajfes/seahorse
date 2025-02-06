@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481 207" width="481" height="207">
+	<title>bottomwave</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-189.067,481,0,6.691,207)">
+			<stop offset="0" stop-color="#1a325f" stop-opacity=".21"/>
+			<stop offset="1" stop-color="#00aedf" stop-opacity=".21"/>
+		</linearGradient>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-204,481.914,0,-0.914,207)">
+			<stop offset=".285" stop-color="#173d4f" stop-opacity=".56"/>
+			<stop offset="1" stop-color="#00aedf" stop-opacity=".21"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+	</style>
+	<path class="s0" d="m336 40c-54.6 5.2-300.7-12.1-336-22.1v189.1h481v-160c-25.7-5.3-72-14-145-7z"/>
+	<path class="s1" d="m0 60.6l79.7-2c4.6 1.1 109 1.4 176.3-19.6 96-30 186-36 225-36v204h-481v-100.4c-1.3-0.3-1.1-45.5 0-46z"/>
+</svg>

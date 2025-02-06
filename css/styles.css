@@ -162,15 +162,23 @@ Then then JS will add thiss class to the hidden element for us (in this case, th
     color: #fff;
 }
 
+.our-company{
+    margin: 9rem 0;
+    background-image: url("/img/home-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 section h2 {
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 600px){
     .home-header{
         background-image: url("/img/home-header-tablet.webp");
         height: 67vw;
     }
+
 }
 
 @media screen and (min-width: 1000px){
@@ -192,10 +200,20 @@ section h2 {
     border-radius: 3px;
 }
 
+/*about */
+.about-intro {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.about-intro h2{
+    text-transform: uppercase;
+}
+
 /* footer */
 .get-in-touch {
     background-image: url(/img/bottomwave.svg);
-    height: 240px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -205,6 +223,18 @@ section h2 {
     align-items: center;
     text-transform: uppercase;
     font-weight: 400;
+    
+}
+
+@media screen and (min-width: 600px){
+    .get-in-touch{
+        background-image: url(/img/bottomwave-tablet2.svg);
+        height: 240px;
+    }
+
+    .get-in-touch h2{
+        padding-top: 2rem;
+    }
     
 }
 
