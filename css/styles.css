@@ -5,14 +5,15 @@ body {
 
 p,
 h2,
-h3 {
+h3,
+li {
     /* font-weight: 300; */
     color: #003249;
     margin-bottom: 2rem;
 }
 
 .inner-container,
-.about-main{
+.about-main {
     max-width: 75rem;
     margin: 0 auto;
 }
@@ -33,7 +34,7 @@ header {
     box-shadow: 2px 2px 10px hsl(0deg 0% 0% / 0.14);
 }
 
-h1 img{
+h1 img {
     width: 150px;
 }
 
@@ -72,8 +73,8 @@ svg {
     fill: #3f3f3f;
 }
 
-svg:hover{
-    fill:#A4B374;
+svg:hover {
+    fill: #A4B374;
     transition: all 0.3s ease-in-out;
 }
 
@@ -105,6 +106,7 @@ Then then JS will add thiss class to the hidden element for us (in this case, th
 
 /* Step 4: add a media query and show the nav by default, hide the button, and style it as a horizontal nav */
 @media screen and (min-width: 700px) {
+
     .flex-container,
     .header-flex {
         display: flex;
@@ -118,7 +120,8 @@ Then then JS will add thiss class to the hidden element for us (in this case, th
 
     header nav {
         max-height: 200px;
-        width: unset; /*a way to reverse anything we did before and to restore things to their default value*/
+        width: unset;
+        /*a way to reverse anything we did before and to restore things to their default value*/
         overflow: visible;
         position: static;
     }
@@ -136,7 +139,7 @@ Then then JS will add thiss class to the hidden element for us (in this case, th
     .menu a:hover,
     .menu a:active {
         background-color: #fff;
-        color:#A4B374;
+        color: #A4B374;
         transition: all 0.3s ease-in-out;
     }
 
@@ -161,11 +164,11 @@ Then then JS will add thiss class to the hidden element for us (in this case, th
     margin-bottom: 2rem;
 }
 
-.home-header h2{
+.home-header h2 {
     color: #fff;
 }
 
-.our-company{
+.our-company {
     margin: 9rem 0;
     background-image: url("../img/home-background-sm.svg");
     background-size: cover;
@@ -191,21 +194,21 @@ section h2 {
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 375px){
-    .our-company{
+@media screen and (min-width: 375px) {
+    .our-company {
         background-image: url("../img/home-background-sm2.svg");
         height: 160vw;
     }
 
-    .our-company div{
+    .our-company div {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
 }
 
-@media screen and (min-width: 435px){
-    .our-company{
+@media screen and (min-width: 435px) {
+    .our-company {
         background-image: url("../img/home-background-md.svg");
         height: 110vw;
     }
@@ -215,15 +218,15 @@ section h2 {
     }
 }
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 500px) {
     .our-company img {
         width: 125px;
         top: -75px;
     }
 }
 
-@media screen and (min-width: 600px){
-    .home-header{
+@media screen and (min-width: 600px) {
+    .home-header {
         background-image: url("../img/home-banner-lg.webp");
         height: 67vw;
     }
@@ -234,8 +237,8 @@ section h2 {
     }
 }
 
-@media screen and (min-width: 700px){
-    .our-company{
+@media screen and (min-width: 700px) {
+    .our-company {
         background-image: url("../img/home-background-lg.svg");
         height: 70vw;
     }
@@ -245,8 +248,8 @@ section h2 {
     }
 }
 
-@media screen and (min-width: 850px){
-    .home-header{
+@media screen and (min-width: 850px) {
+    .home-header {
         background-image: url("../img/home-banner-xl.webp");
         height: 30vw;
     }
@@ -254,7 +257,8 @@ section h2 {
 
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) {
+
     .our-company .inner-container h2,
     .our-company .inner-container p,
     .our-company .inner-container ul {
@@ -265,12 +269,12 @@ section h2 {
         width: 30%;
         top: 10px
     }
- 
+
 }
 
 
-@media screen and (min-width: 1000px){
-    .our-company{
+@media screen and (min-width: 1000px) {
+    .our-company {
         background-image: url("../img/home-background-xl.svg");
         height: 706px;
         margin-top: 3rem;
@@ -280,7 +284,7 @@ section h2 {
 
 .green-btn {
     background-color: #A4B374;
-    color:#fff;
+    color: #fff;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -303,15 +307,15 @@ section h2 {
 .what-intro h2,
 .latest-intro h2 {
     text-transform: uppercase;
-    
+
 }
 
-.gallery img{
+.gallery img {
     margin: 0 auto;
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
     .gallery img {
         margin-bottom: unset;
     }
@@ -325,19 +329,20 @@ section h2 {
     }
 }
 
-@media screen and (min-width: 950px){
+@media screen and (min-width: 950px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
     }
 }
 
-.about-content{
+.about-content {
     max-width: 648px;
     margin: 0 auto;
 }
+
 .about-content img {
     margin-bottom: 2rem;
 }
@@ -351,7 +356,8 @@ section h2 {
     margin: 0 auto;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
+
     .about-content,
     .what-info {
         max-width: 1200px;
@@ -359,27 +365,28 @@ section h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    .what-info{
+    .what-info {
         gap: 2rem;
     }
 
     .about-content img,
-    .beforeAfter{
+    .beforeAfter {
         border-radius: 4px;
     }
 
     .about-content div,
-    .what-info-text{
+    .what-info-text {
         background-color: #fff;
         width: 50%;
     }
-    
+
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
+
     .about-content,
     .what-info {
         max-width: 1200px;
@@ -390,15 +397,15 @@ section h2 {
         align-items: center;
     }
 
-    .what-info{
+    .what-info {
         flex-direction: row-reverse;
     }
 
-    .about-content img{
+    .about-content img {
         width: 645px;
     }
 
-    .about-content div{
+    .about-content div {
         background-color: #fff;
         width: 50%;
         padding: 2rem 2rem 0 2rem;
@@ -407,17 +414,17 @@ section h2 {
         left: -100px;
         border-radius: 4px;
         box-shadow: 2px 2px 10px hsl(0deg 0% 0% / 0.14);
-        
+
     }
 
     /* .what-info-text{
         width: 40%;
         z-index: 2;
     } */
-    
+
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
     .our-equipment {
         max-width: 1200px;
         margin: 0 2rem;
@@ -429,17 +436,17 @@ section h2 {
         align-items: center;
         gap: 2rem;
     }
-    
-    .our-equipment img{
+
+    .our-equipment img {
         width: 55%;
         border-radius: 4px;
     }
-    
-    .our-equipment div{
+
+    .our-equipment div {
         width: 45%;
     }
 
-    .our-equipment div li{
+    .our-equipment div li {
         margin-bottom: 1rem;
     }
 }
@@ -458,23 +465,23 @@ section h2 {
     align-items: center;
     text-transform: uppercase;
     font-weight: 400;
-    
+
 }
 
-@media screen and (min-width: 600px){
-    .get-in-touch{
+@media screen and (min-width: 600px) {
+    .get-in-touch {
         background-image: url(../img/bottomwave-tablet2.svg);
         height: 240px;
     }
 
-    .get-in-touch h2{
+    .get-in-touch h2 {
         padding-top: 2rem;
     }
-    
+
 }
 
-@media screen and (min-width: 850px){
-    .footer-flex{
+@media screen and (min-width: 850px) {
+    .footer-flex {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
@@ -488,7 +495,7 @@ section h2 {
     fill: #A4B374;
 }
 
-@media screen and (min-width: 1250px){
+@media screen and (min-width: 1250px) {
     .get-in-touch {
         background-image: url(../img/bottomwave-tablet2.svg);
         height: 200px;
@@ -496,7 +503,7 @@ section h2 {
     }
 
     .get-in-touch h2 {
-        color:#003249
+        color: #003249
     }
 }
 
@@ -521,6 +528,6 @@ footer p {
     margin-bottom: 2rem;
 }
 
-.beforeAfter img{
+.beforeAfter img {
     max-width: unset;
 }
