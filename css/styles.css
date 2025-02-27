@@ -468,6 +468,12 @@ section h2 {
 
 }
 
+.footer-flex a {
+    color: #fff;
+    padding-bottom: 1.5rem;
+    display: inline-block;
+}
+
 @media screen and (min-width: 600px) {
     .get-in-touch {
         background-image: url(../img/bottomwave-tablet2.svg);
