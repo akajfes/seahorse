@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +8,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <header>
         <div class="inner-container header-flex">
@@ -35,29 +34,26 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section class="home-header">
-            <div class="inner-container">
-                <h2>30+ Years of Eco-Friendly Aquatic Vegetation Management</h2>
-                <a href="mailto:office@seahorseaquatic.ca" class="green-btn">Free Quote</a>
-            </div>
+    <main class="about-main">
+        <section class="about-intro inner-container">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Fill out the form below and we'll get back to you as soon as possible!</p>
         </section>
-        <section class="our-company">
+        <section class="about-content">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="img/Truxor_General_4_web.jpg"">
+                <img src="img/Truxor_General_4_web.jpg" alt="Picture of grass cutting and machinery">
+            </picture>
             <div class="inner-container">
-                <img src="img/plant.png" alt="Icon of seaweed">
-                <h2>Our Company</h2>
-                <p>Seahorse Aquatic Vegetation Harvesting has been in operation in the Province of Alberta for over 30
-                    years. We provide quality aquatic vegetation harvesting, suction dredging, excavating, vegetation
-                    removal and cattail removal services for private individuals and municipalities across Prairie
-                    Provinces and BC.</p>
-                <ul>
-                    <li>Complies with the Occupational Health & Safety Act of Alberta and has work site safety plans in
-                        place.</li>
-                    <li>Holds current business licenses and permits for several municipalities across Alberta and BC.
-                    </li>
-                    <li>SECOR Certified</li>
-                    <li>Has fully insured workers and services</li>
-                </ul>
+                <form id="contact-form" class="contact-form">
+                    <label>Name</label>
+                    <input type="text" name="user_name" placeholder="Your Name" required />
+                    <label>Email</label>
+                    <input type="email" name="user_email" placeholder="Your Email" required />
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send">
+                </form>
             </div>
         </section>
     </main>
@@ -89,6 +85,25 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+          // Initialize EmailJS with your Public Key
+          emailjs.init('EcM-ppRuZvXjTtpB1'); // Replace with your EmailJS Public Key
+    
+          // Send Email Function
+          document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            emailjs.sendForm('service_dqo1p0z', 'contact_form', this)
+              .then(function (response) {
+                alert('Email sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+              }, function (error) {
+                alert('Failed to send email.');
+                console.error('FAILED...', error);
+              });
+          });
+        })();
+      </script>
 </body>
-
 </html>
