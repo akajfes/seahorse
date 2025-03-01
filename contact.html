@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="inner-container header-flex">
@@ -41,7 +43,7 @@
         </section>
         <section class="about-content">
             <picture>
-                <source media="(min-width: 1000px)" srcset="img/Truxor_General_4_web.jpg"">
+                <source media="(min-width: 1000px)" srcset="img/Truxor_General_4_web.jpg">
                 <img src="img/Truxor_General_4_web.jpg" alt="Picture of grass cutting and machinery">
             </picture>
             <div class="inner-container">
@@ -87,23 +89,24 @@
     </footer>
     <script>
         (function () {
-          // Initialize EmailJS with your Public Key
-          emailjs.init('EcM-ppRuZvXjTtpB1'); // Replace with your EmailJS Public Key
-    
-          // Send Email Function
-          document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-    
-            emailjs.sendForm('service_dqo1p0z', 'contact_form', this)
-              .then(function (response) {
-                alert('Email sent successfully!');
-                console.log('SUCCESS!', response.status, response.text);
-              }, function (error) {
-                alert('Failed to send email.');
-                console.error('FAILED...', error);
-              });
-          });
+            // Initialize EmailJS with your Public Key
+            emailjs.init('EcM-ppRuZvXjTtpB1'); // Replace with your EmailJS Public Key
+
+            // Send Email Function
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                emailjs.sendForm('service_dqo1p0z', 'contact_form', this)
+                    .then(function (response) {
+                        alert('Email sent successfully!');
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function (error) {
+                        alert('Failed to send email.');
+                        console.error('FAILED...', error);
+                    });
+            });
         })();
-      </script>
+    </script>
 </body>
+
 </html>
